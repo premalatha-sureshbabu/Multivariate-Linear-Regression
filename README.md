@@ -35,24 +35,23 @@ End of program
 ##reference no:22009393
 import pandas as pd
 from sklearn import linear_model
-df = pd.read_csv("cars.csv")
-x = df[["Weight","Volume"]]
-y = df["CO2"]
-regr = linear_model.LinearRegression()
-regr.fit(x,y)
-print("Coefficient:",regr.coef_)
-print("Intercept:",regr.intercept_)
-predictedCO2 = regr.predict([[3300,1300]])
-print("Predicted CO2 for the correspondig weight and volume",predictedCO2)
-
-
+df=pd.read_csv("cars.csv")
+X=df[['Weight', 'Volume']]
+y=df['CO2']
+regr=linear_model.LinearRegression()
+regr.fit(X,y)
+print('Coefficients',regr.coef_)
+print('Intercept',regr.intercept_)
+predictedCO2=regr.predict([[3300,1300]])
+print('Predicted CO2 emission based on weight and volume:',predictedCO2)
 
 
 
 ```
 ## Output:
 
-![Screenshot (95)](https://user-images.githubusercontent.com/120620842/214342015-34549410-d275-42ef-94d3-ecd561655aa0.png)
+
+![Screenshot (74)](https://user-images.githubusercontent.com/120620842/214812526-a0179012-e8c3-4203-9ebf-01ff015c209f.png)
 
 
 ### Insert your output
